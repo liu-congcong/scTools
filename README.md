@@ -43,17 +43,13 @@ You can use `scTools info` to inspect the information of `scTools-merge.h5ad`.
 
 ### 4. Perform differential analysis of genes between groups from an H5AD file (< 1 min)
 
-To perform differential analysis of genes across different organ - cell type combinations,
-
-a group file must be defined with the following format:
+To perform differential analysis of genes across different organ - cell type combinations, a group file must be defined with the following format:
 
 |  *  |organ|cell_type|
 |:---:|:---:|:-------:|
 | ... | ... |   ...   |
 
-The first column specifies the group identifier, and all subsequent columns
-
-must match existing annotations in H5AD file.
+The first column specifies the group identifier, and all subsequent columns must match existing annotations in H5AD file.
 
 By default, scTools performs differential analysis on all genes across groups.
 
