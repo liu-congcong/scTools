@@ -1,8 +1,8 @@
-# SCTools
+# scTools
 
 A toolkit for single-cell sequencing data analysis in H5AD format.
 
-## Install SCTools
+## Install scTools
 
 ```text
 python3 -m venv sctools
@@ -13,7 +13,7 @@ deactivate
 
 ## Examples
 
-### 1. Data preparation
+### 1. Preparation
 
 ```text
 wget -O kidney.h5ad https://datasets.cellxgene.cziscience.com/65ca6e36-73b0-4c88-b0f3-7b23b48844ad.h5ad
