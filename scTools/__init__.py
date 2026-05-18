@@ -155,11 +155,11 @@ def __init__():
     )
     clusterParser.add_argument(
         '--width', default = 7.0, type = float, required = False, metavar = '<float>',
-        help = 'Figure width in inches.\nThe value be a positive float.\nDefault: 7.0.'
+        help = 'Figure width in inches.\nThe value must be a positive float.\nDefault: 7.0.'
     )
     clusterParser.add_argument(
         '--height', default = 7.0, type = float, required = False, metavar = '<float>',
-        help = 'Figure height in inches.\nThe value be a positive float.\nDefault: 7.0.'
+        help = 'Figure height in inches.\nThe value must be a positive float.\nDefault: 7.0.'
     )
 
     markerParser = subparsers.add_parser(

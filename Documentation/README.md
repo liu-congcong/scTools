@@ -115,10 +115,10 @@ options:
                         The value must be a positive float.
                         Default: 5.
   --width <float>       Figure width in inches.
-                        The value be a positive float.
+                        The value must be a positive float.
                         Default: 7.0.
   --height <float>      Figure height in inches.
-                        The value be a positive float.
+                        The value must be a positive float.
                         Default: 7.0.
 ```
 
