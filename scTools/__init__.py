@@ -51,7 +51,7 @@ def __init__():
     diffexpParser = subparsers.add_parser(
         'diffexp', formatter_class = RawTextHelpFormatter,
         help='Perform differential analysis of genes between groups from an H5AD file.',
-        usage = '%(prog)s [options] -i H5AD -g GROUP -o OUTPUT.'
+        usage = '%(prog)s [options] -i H5AD -g GROUP -o DIFFEXP.'
     )
     diffexpParser.add_argument(
         '-i', '--input', type = str, required = True, metavar = '<str>',
@@ -165,7 +165,7 @@ def __init__():
     markerParser = subparsers.add_parser(
         'marker', formatter_class = RawTextHelpFormatter,
         help = 'Identify group-specific marker genes.',
-        usage = '%(prog)s [options] -t TEST -o MARKER.'
+        usage = '%(prog)s [options] -d DIFFEXP -o MARKER.'
     )
     markerParser.add_argument(
         '-d', '--diffexp', type = str, required = True, metavar = '<str>',

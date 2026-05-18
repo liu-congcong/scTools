@@ -30,7 +30,7 @@ options:
 ### diffexp
 
 ```text
-usage: scTools diffexp [options] -i H5AD -g GROUP -o OUTPUT.
+usage: scTools diffexp [options] -i H5AD -g GROUP -o DIFFEXP.
 
 options:
   -h, --help            show this help message and exit
@@ -125,7 +125,7 @@ options:
 ### marker
 
 ```text
-usage: scTools marker [options] -t TEST -o MARKER.
+usage: scTools marker [options] -d DIFFEXP -o MARKER.
 
 options:
   -h, --help           show this help message and exit
