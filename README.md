@@ -16,35 +16,61 @@ deactivate
 ### 1. Data preparation
 
 ```text
-wget https://datasets.cellxgene.cziscience.com/65ca6e36-73b0-4c88-b0f3-7b23b48844ad.h5ad
-mv 65ca6e36-73b0-4c88-b0f3-7b23b48844ad.h5ad kidney.h5ad
-wget https://datasets.cellxgene.cziscience.com/4be7951a-4ae7-4a81-86f1-e2649b304d1c.h5ad
-mv 4be7951a-4ae7-4a81-86f1-e2649b304d1c.h5ad pancreas.h5ad
+wget -O kidney.h5ad https://datasets.cellxgene.cziscience.com/65ca6e36-73b0-4c88-b0f3-7b23b48844ad.h5ad
+wget -O pancreas.h5ad https://datasets.cellxgene.cziscience.com/4be7951a-4ae7-4a81-86f1-e2649b304d1c.h5ad
 ```
 
-### 2. Extract information from an H5AD file
+### 2. Extract information from an H5AD file (< 1 min)
 
 ```text
 scTools info -i kidney.h5ad -o kidney
 scTools info -i pancreas.h5ad -o pancreas
 ```
 
-### 3. Merge multiple files into a single file
+### 3. Merge multiple files into a single file (< 1 min)
 
 ```text
 scTools merge --label organ --obs-key cell_type -i kidney.h5ad pancreas.h5ad -o scTools-merge.h5ad
 ```
 
-### 4. Perform differential analysis of genes between groups from an H5AD file
+In `scTools-merge.h5ad`, only the `cell_type` annotation was retained, and a new annotation `organ` was added.
+
+All cells originating from `kidney.h5ad` were assigned the label `kidney`,
+
+while all cells from `pancreas.h5ad` were assigned the label `pancreas`.
+
+You can use `scTools info` to inspect the information of `scTools-merge.h5ad`.
+
+### 4. Perform differential analysis of genes between groups from an H5AD file (< 1 min)
+
+To perform differential analysis of genes across different organ - cell type combinations,
+
+a group file must be defined with the following format:
+
+|  *  |organ|cell_type|
+|:---:|:---:|:-------:|
+| ... | ... |   ...   |
+
+The first column specifies the group identifier, and all subsequent columns
+
+must match existing annotations in H5AD file.
+
+By default, scTools performs differential analysis on all genes across groups.
+
+To restrict the analysis to a subset of genes, a marker file can be provided:
+
+|Genes|
+|:---:|
+| ... |
 
 ```text
-scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.tsv -o scTools-diffexp
+scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.txt -o scTools-diffexp.tsv
 ```
 
-### 5. Identify group-specific marker genes
+### 5. Identify group-specific marker genes (< 1 min)
 
 ```text
-scTools marker -d scTools-diffexp -m mapping.tsv -o scTools-marker
+scTools marker -t scTools-diffexp.tsv -m mapping.tsv -o scTools-marker.tsv
 ```
 
 ## Documentation
