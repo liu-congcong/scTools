@@ -59,9 +59,9 @@ By default, scTools performs differential analysis on all genes across groups.
 
 To restrict the analysis to a subset of genes, a marker file can be provided:
 
-|Genes|
-|:---:|
-| ... |
+| * |Gene| * |
+|:-:|:--:|:-:|
+|...|... |...|
 
 ```text
 scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.txt -o scTools-diffexp.tsv
