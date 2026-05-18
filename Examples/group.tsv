@@ -1,0 +1,37 @@
+*	organ	cell_type
+kidney-kidney epithelial cell	kidney	kidney epithelial cell
+pancreas-pancreatic acinar cell	pancreas	pancreatic acinar cell
+pancreas-pancreatic ductal cell	pancreas	pancreatic ductal cell
+pancreas-endothelial cell	pancreas	endothelial cell
+pancreas-macrophage	pancreas	macrophage
+pancreas-CD8-positive, alpha-beta T cell	pancreas	CD8-positive, alpha-beta T cell
+kidney-CD8-positive, alpha-beta T cell	kidney	CD8-positive, alpha-beta T cell
+kidney-B cell	kidney	B cell
+pancreas-pancreatic stellate cell	pancreas	pancreatic stellate cell
+pancreas-classical monocyte	pancreas	classical monocyte
+kidney-macrophage	kidney	macrophage
+kidney-CD4-positive, alpha-beta T cell	kidney	CD4-positive, alpha-beta T cell
+kidney-natural killer cell	kidney	natural killer cell
+pancreas-fibroblast	pancreas	fibroblast
+pancreas-type B pancreatic cell	pancreas	type B pancreatic cell
+kidney-endothelial cell	kidney	endothelial cell
+kidney-monocyte	kidney	monocyte
+pancreas-B cell	pancreas	B cell
+pancreas-natural killer cell	pancreas	natural killer cell
+pancreas-pancreatic A cell	pancreas	pancreatic A cell
+pancreas-intermediate monocyte	pancreas	intermediate monocyte
+pancreas-CD4-positive, alpha-beta T cell	pancreas	CD4-positive, alpha-beta T cell
+kidney-non-classical monocyte	kidney	non-classical monocyte
+kidney-neutrophil	kidney	neutrophil
+kidney-T cell	kidney	T cell
+pancreas-plasma cell	pancreas	plasma cell
+pancreas-monocyte	pancreas	monocyte
+pancreas-pancreatic D cell	pancreas	pancreatic D cell
+pancreas-neutrophil	pancreas	neutrophil
+kidney-plasma cell	kidney	plasma cell
+kidney-intermediate monocyte	kidney	intermediate monocyte
+pancreas-mast cell	pancreas	mast cell
+pancreas-pancreatic PP cell	pancreas	pancreatic PP cell
+pancreas-mature NK T cell	pancreas	mature NK T cell
+pancreas-T cell	pancreas	T cell
+pancreas-non-classical monocyte	pancreas	non-classical monocyte
