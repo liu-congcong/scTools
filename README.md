@@ -35,9 +35,7 @@ scTools merge --label organ --obs-key cell_type -i kidney.h5ad pancreas.h5ad -o 
 
 In `scTools-merge.h5ad`, only the `cell_type` annotation was retained, and a new annotation `organ` was added.
 
-All cells originating from `kidney.h5ad` were assigned the label `kidney`,
-
-while all cells from `pancreas.h5ad` were assigned the label `pancreas`.
+All cells originating from `kidney.h5ad` were assigned the label `kidney`, and all cells from `pancreas.h5ad` were assigned the label `pancreas`.
 
 You can use `scTools info` to inspect the information of `scTools-merge.h5ad`.
 
