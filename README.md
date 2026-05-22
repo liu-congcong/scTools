@@ -7,7 +7,7 @@ A toolkit for single-cell sequencing data analysis in H5AD format.
 ```text
 python3 -m venv sctools
 source sctools/bin/activate
-pip3 install https://github.com/liu-congcong/SCTools/releases/download/v1.0.0/sctools-1.0.0-py3-none-any.whl
+pip3 install https://github.com/liu-congcong/scTools/releases/download/v1.0.0/sctools-1.0.0-py3-none-any.whl
 deactivate
 ```
 
@@ -64,12 +64,12 @@ scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.txt -o scTools-diff
 ### 5. Identify group-specific marker genes (< 1 min)
 
 ```text
-scTools marker -t scTools-diffexp.tsv -m mapping.tsv -o scTools-marker.tsv
+scTools marker -d scTools-diffexp.tsv -m mapping.tsv -o scTools-marker.tsv
 ```
 
 ## Documentation
 
-[HERE](https://github.com/liu-congcong/SCTools/tree/main/Documentation).
+[HERE](https://github.com/liu-congcong/scTools/tree/main/Documentation).
 
 ## Updates
 
