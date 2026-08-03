@@ -62,12 +62,12 @@ def __init__():
         help = 'Path to the input group file.\nThe file must be tab-delimited with a header line.\nThe first column defines group names.\nAll other columns must match cell annotations in the H5AD file.\nUse "scTools info" to inspect available columns in the H5AD file.'
     )
     diffexpParser.add_argument(
-        '-m', '--marker', type = str, required = False, metavar = '<str>',
-        help = 'Path to the input marker file.\nSpecifies the subset of genes to be used for testing.\nThe file must be tab-delimited with a header line.\nA column \"Gene\" is required.'
-    )
-    diffexpParser.add_argument(
         '-o', '--output', type = str, required = True, metavar = '<str>',
         help = 'Path to the output file.'
+    )
+    diffexpParser.add_argument(
+        '-m', '--marker', type = str, required = False, metavar = '<str>',
+        help = 'Path to the input marker file.\nSpecifies the subset of genes to be used for testing.\nThe file must be tab-delimited with a header line.\nA column \"Gene\" is required.'
     )
     diffexpParser.add_argument(
         '--max-mt', default = 10.0, type = float, required = False, metavar = '<float>',

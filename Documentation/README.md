@@ -1,4 +1,4 @@
-# SCTools
+# scTools
 
 A toolkit for single-cell sequencing data analysis in H5AD format.
 

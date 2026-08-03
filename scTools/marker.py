@@ -43,6 +43,7 @@ def main(parameters):
         if (parameters.coverage is None) or (len(x) <= parameters.coverage):
             x.sort(reverse = True) # log2FCMeanRankGroup, ..., log2FCMeanRankGroup #
             for log2FC, mean, rank, group in x[ : parameters.hits]:
-                openFile.write(f'{group}\t{gene}\t{gene2protein.get(gene, 'NA')}\t{mean}\t{rank}\t{log2FC}\n')
+                protein = gene2protein.get(gene, 'NA')
+                openFile.write(f'{group}\t{gene}\t{protein}\t{mean}\t{rank}\t{log2FC}\n')
     openFile.close()
     return None

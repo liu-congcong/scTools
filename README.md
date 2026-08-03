@@ -41,13 +41,15 @@ You can use `scTools info` to inspect the information of `scTools-merge.h5ad`.
 
 ### 4. Perform differential analysis of genes between groups from an H5AD file (< 1 min)
 
-To perform differential analysis of genes across different organ - cell type combinations, a group file must be defined with the following format:
+To perform differential analysis of genes across different organ - cell type combinations, a `group` file must be defined with the following format:
 
 |  *  |organ|cell_type|
 |:---:|:---:|:-------:|
 | ... | ... |   ...   |
 
 The first column specifies the group identifier, and all subsequent columns must match existing annotations in H5AD file.
+
+An example `group` file is provided here: [`Examples/group.tsv`](./Examples/group.tsv).
 
 By default, scTools performs differential analysis on all genes across groups.
 
@@ -56,6 +58,10 @@ To restrict the analysis to a subset of genes, a marker file can be provided:
 | * |Gene| * |
 |:-:|:--:|:-:|
 |...|... |...|
+
+The `marker` file must contain a column named `Gene` (case-sensitive).
+
+An example `marker` file is provided here: [`Examples/marker.txt`](./Examples/marker.txt).
 
 ```text
 scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.txt -o scTools-diffexp.tsv
