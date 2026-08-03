@@ -20,14 +20,20 @@ wget -O kidney.h5ad https://datasets.cellxgene.cziscience.com/65ca6e36-73b0-4c88
 wget -O pancreas.h5ad https://datasets.cellxgene.cziscience.com/4be7951a-4ae7-4a81-86f1-e2649b304d1c.h5ad
 ```
 
-### 2. Extract information from an H5AD file (< 1 min)
+### 2. Activate the environment
+
+```text
+source sctools/bin/activate
+```
+
+### 3. Extract information from an H5AD file (< 1 min)
 
 ```text
 scTools info -i kidney.h5ad -o kidney
 scTools info -i pancreas.h5ad -o pancreas
 ```
 
-### 3. Merge multiple files into a single file (< 1 min)
+### 4. Merge multiple files into a single file (< 1 min)
 
 ```text
 scTools merge --label organ --obs-key cell_type -i kidney.h5ad pancreas.h5ad -o scTools-merge.h5ad
@@ -39,7 +45,7 @@ All cells originating from `kidney.h5ad` were assigned the label `kidney`, and a
 
 You can use `scTools info` to inspect the information of `scTools-merge.h5ad`.
 
-### 4. Perform differential analysis of genes between groups from an H5AD file (< 1 min)
+### 5. Perform differential analysis of genes between groups from an H5AD file (< 1 min)
 
 To perform differential analysis of genes across different organ - cell type combinations, a `group` file must be defined with the following format:
 
@@ -67,10 +73,16 @@ An example `marker` file is provided here: [`marker.txt`](./Examples/marker.txt)
 scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.txt -o scTools-diffexp.tsv
 ```
 
-### 5. Identify group-specific marker genes (< 1 min)
+### 6. Identify group-specific marker genes (< 1 min)
 
 ```text
 scTools marker -d scTools-diffexp.tsv -m mapping.tsv -o scTools-marker.tsv
+```
+
+### 7. Deactivate the environment
+
+```text
+deactivate
 ```
 
 ## Documentation
