@@ -49,7 +49,7 @@ To perform differential analysis of genes across different organ - cell type com
 
 The first column specifies the group identifier, and all subsequent columns must match existing annotations in H5AD file.
 
-An example `group` file is provided here: [`Examples/group.tsv`](./Examples/group.tsv).
+An example `group` file is provided here: [`group.tsv`](./Examples/group.tsv).
 
 By default, scTools performs differential analysis on all genes across groups.
 
@@ -61,7 +61,7 @@ To restrict the analysis to a subset of genes, a `marker` file can be provided:
 
 The `marker` file must contain a column named `Gene` (case-sensitive).
 
-An example `marker` file is provided here: [`Examples/marker.txt`](./Examples/marker.txt).
+An example `marker` file is provided here: [`marker.txt`](./Examples/marker.txt).
 
 ```text
 scTools diffexp -i scTools-merge.h5ad -g group.tsv -m marker.txt -o scTools-diffexp.tsv
