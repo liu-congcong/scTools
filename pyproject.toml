@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools >= 70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scTools"
+version = "1.0.0"
+description = "A toolkit for single-cell sequencing data analysis in H5AD format."
+requires-python = ">=3.5"
+license = "GPL-3.0-or-later"
+authors = [
+    {name = "Jing Guo", email = "guojing@xjtu.edu.cn"},
+    {name = "Cong-Cong Liu", email = "congcong_liu@icloud.com"}
+]
+maintainers = [{name = "Cong-Cong Liu", email = "congcong_liu@icloud.com"}]
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "scipy>=1.11.0",
+    "scikit-learn",
+    "threadpoolctl",
+    "anndata",
+    "scanpy",
+    "pandas",
+    "scanpy"
+]
+
+[project.urls]
+Homepage = "https://github.com/liu-congcong/scTools/"
+Documentation = "https://github.com/liu-congcong/scTools/Documentation/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scTools"]
+
+[tool.setuptools.package-data]
+scTools = ["*.dylib", "*.so", "*.dll"]
+
+[project.scripts]
+scTools = "scTools:main"
